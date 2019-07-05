@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[43]:
 
 
 # If an even number is multiplied with an odd number then the product of the two numbers is even
@@ -27,10 +27,14 @@ def pair_matcher(integers, n):   #Function with two input arguments
            list_odd.append(integers[i])  #Using .append function to add the odd numbers to an empty list
            
    print("The pairs of numbers in the list whose product is even and sum is odd are: ") #Using a print statement
+   
+   list_pairs=[]  #List to store the pairs of integers in the list whose product is even and sum is odd
+   
    for x in range(len(list_even)): #Iterating through the list of even integers
        for y in range(len(list_odd)): #Iterating through the list of odd integers
-           print((list_even[x],list_odd[y]))  #Printing the matched pair of numbers
-           
+           list_pairs.append((list_even[x],list_odd[y]))  #appending the matched pair of numbers
+   print(list_pairs)  #Printing out the matched pair of numbers
+   
 #Getting the input from the user for the required list of integers
 user_input = input("Please enter the required integers seperated by space and hit enter: ") 
 
